@@ -1,0 +1,93 @@
+:root {
+  --etherion-oscuro: #0b0f19;
+  --etherion-panel: #131b2e;
+  --etherion-mako: #00e5a3;
+  --etherion-cristal: #38bdf8;
+  --etherion-dorado: #f59e0b;
+  --etherion-claro: #f1f5f9;
+  --etherion-texto: #e2e8f0;
+  --etherion-muted: #94a3b8;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--etherion-texto);
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: var(--etherion-oscuro); color: var(--etherion-texto); }
+a { text-decoration: none; }
+
+/* Navbar */
+.etherion-navbar { background: rgba(11, 15, 25, 0.95); border-bottom: 1px solid #1e293b; box-shadow: 0 4px 20px #00000060; }
+.etherion-brand { display: inline-flex; align-items: center; gap: 10px; color: #fff; font-size: 15px; letter-spacing: 2.5px; font-weight: 600; }
+.etherion-brand:hover { color: #fff; }
+.etherion-brand b { color: var(--etherion-mako); font-weight: 800; }
+.etherion-brand__mark { display: grid; place-items: center; width: 36px; height: 36px; border: 1.5px solid var(--etherion-mako); border-radius: 6px; background: #0f292a; color: var(--etherion-mako); font: 700 18px Georgia, serif; box-shadow: 0 0 12px #00e5a335; }
+.etherion-nav a:not(.btn) { color: #cbd5e1; font-size: 14px; font-weight: 500; transition: color .2s ease; }
+.etherion-nav a:not(.btn):hover { color: var(--etherion-mako); }
+.btn-etherion { border: 1px solid var(--etherion-mako); border-radius: 4px; background: var(--etherion-mako); color: #062019; font-weight: 700; transition: all .2s ease; }
+.btn-etherion:hover { border-color: #5eead4; background: #5eead4; color: #062019; transform: translateY(-1px); }
+
+/* Hero */
+.etherion-hero { min-height: 600px; position: relative; overflow: hidden; background: var(--etherion-oscuro); color: white; }
+.etherion-hero__image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; image-rendering: auto; }
+.etherion-hero__shade { position: absolute; inset: 0; background: linear-gradient(90deg, #0b0f19f2 0%, #0b0f19cc 50%, #0b0f1955 100%); }
+.etherion-hero__content { z-index: 1; padding-top: 84px; padding-bottom: 84px; }
+.etherion-eyebrow { color: var(--etherion-mako); font-size: 11px; letter-spacing: 2.8px; font-weight: 700; text-transform: uppercase; }
+.etherion-hero h1 { max-width: 700px; margin: 16px 0; color: white; font: 700 clamp(38px, 5.5vw, 68px)/1.06 Georgia, serif; }
+.etherion-hero .lead { max-width: 540px; margin-bottom: 16px; color: #cbd5e1; font-size: 18px; line-height: 1.65; }
+.hero-note { color: var(--etherion-cristal); font-size: 13px; letter-spacing: .6px; font-weight: 600; }
+
+/* Sections */
+.etherion-section { padding: 80px 0; }
+.categories-section { background: #0e1422; border-top: 1px solid #1e293b; border-bottom: 1px solid #1e293b; }
+.games-section { background: var(--etherion-oscuro); }
+.news-section { background: #0e1422; border-top: 1px solid #1e293b; }
+
+.section-heading { max-width: 660px; }
+.section-heading--left { margin-left: 0; }
+.etherion-eyebrow--accent { color: var(--etherion-cristal); }
+.section-heading h2 { margin: 10px 0 12px; color: #ffffff; font: 700 clamp(28px, 4vw, 40px)/1.15 Georgia, serif; }
+.section-heading p { margin: 0; color: var(--etherion-muted); font-size: 16px; }
+
+/* Category Cards */
+.category-card { padding: 26px 22px; border: 1px solid #1e293b; border-radius: 8px; background: var(--etherion-panel); transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+.category-card:hover { transform: translateY(-4px); border-color: var(--etherion-mako); box-shadow: 0 12px 28px #00e5a314; }
+.category-icon { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 8px; background: #0f292a; color: var(--etherion-mako); font-size: 13px; font-weight: 800; letter-spacing: 1px; margin-bottom: 16px; border: 1px solid #00e5a340; }
+.category-card h3 { color: #fff; font: 600 20px Georgia, serif; margin-bottom: 8px; }
+.category-card p { color: var(--etherion-muted); font-size: 14px; margin-bottom: 12px; line-height: 1.55; }
+.category-tag { font-size: 11px; color: var(--etherion-cristal); font-weight: 700; letter-spacing: .8px; text-transform: uppercase; }
+
+/* Game Cards */
+.game-card { overflow: hidden; border: 1px solid #1e293b; border-radius: 8px; background: var(--etherion-panel); box-shadow: 0 10px 28px #00000040; transition: transform .2s ease, border-color .2s ease; }
+.game-card:hover { transform: translateY(-6px); border-color: var(--etherion-cristal); }
+.game-card__image-wrap { position: relative; overflow: hidden; }
+.game-card__image { height: 220px; width: 100%; object-fit: cover; transition: transform .35s ease; }
+.game-card:hover .game-card__image { transform: scale(1.04); }
+.game-badge { position: absolute; top: 14px; left: 14px; padding: 6px 12px; border-radius: 4px; background: #0b0f19e6; border: 1px solid var(--etherion-mako); color: var(--etherion-mako); font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 700; }
+.game-card h3 { margin-bottom: 10px; color: #ffffff; font: 600 22px Georgia, serif; }
+.game-card p { color: var(--etherion-muted); font-size: 14px; line-height: 1.6; }
+.game-link { color: var(--etherion-mako); font-size: 13px; font-weight: 700; letter-spacing: .3px; }
+.game-link:hover { color: var(--etherion-cristal); }
+
+/* News / Novedades Cards */
+.news-intro { max-width: 340px; color: var(--etherion-muted); font-size: 14px; }
+.news-card { height: 100%; padding: 20px; border-radius: 8px; background: var(--etherion-oscuro); border: 1px solid #1e293b; }
+.news-card img { width: 100%; height: 205px; object-fit: cover; border-radius: 6px; margin-bottom: 16px; }
+.news-date { display: inline-block; color: var(--etherion-dorado); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 6px; }
+.news-card h3 { margin: 0 0 8px; color: #ffffff; font: 600 21px Georgia, serif; }
+.news-card p { margin: 0; color: var(--etherion-muted); font-size: 14px; line-height: 1.6; }
+
+/* Footer */
+.etherion-footer { background: #070a12; border-top: 1px solid #1e293b; color: #94a3b8; }
+.etherion-brand--light { font-size: 14px; }
+.etherion-footer small { color: #64748b; }
+
+@media (max-width: 767.98px) {
+  .etherion-navbar .container { align-items: flex-start !important; flex-direction: column; gap: 14px; }
+  .etherion-nav { width: 100%; gap: 14px !important; flex-wrap: wrap; }
+  .etherion-nav a:not(.btn) { font-size: 13px; }
+  .etherion-hero { min-height: 510px; }
+  .etherion-hero__shade { background: linear-gradient(90deg, #0b0f19f2, #0b0f19cc 78%, #0b0f1990); }
+  .etherion-hero__content { padding-top: 60px; padding-bottom: 60px; }
+  .etherion-section { padding: 56px 0; }
+  .game-card__image { height: 200px; }
+}
