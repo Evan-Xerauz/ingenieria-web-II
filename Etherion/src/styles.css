@@ -91,3 +91,12 @@ a { text-decoration: none; }
   .etherion-section { padding: 56px 0; }
   .game-card__image { height: 200px; }
 }
+/* pasar el cursor (Hover effect) */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 255, 128, 0.15) !important;
+}

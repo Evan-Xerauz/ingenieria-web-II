@@ -1,6 +1,16 @@
-import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./styles.css";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router';
+// Importa el CSS y JS de Bootstrap aquí:
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import App from './App.jsx';
+import './styles.css';
 
-createRoot(document.getElementById("root")).render(<App />);
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StrictMode>,
+);

@@ -6,12 +6,12 @@ import imgPixel from "../assets/hero-education.jpg";
 
 function JuegosDestacados() {
   return (
-    <section className="etherion-section games-section" id="destacados">
+    <section className="etherion-section games-section py-5" id="destacados">
       <div className="container">
-        <div className="section-heading text-center mx-auto">
-          <span className="etherion-eyebrow">SELECCIÓN DE LA COMUNIDAD</span>
-          <h2>Juegos Destacados en Etherion</h2>
-          <p>Títulos imprescindibles que combinan narrativa memorable, dirección artística y jugabilidad envolvente.</p>
+        <div className="section-heading text-center mx-auto mb-4">
+          <span className="text-success fw-bold small text-uppercase">SELECCIÓN DE LA COMUNIDAD</span>
+          <h2 className="text-white fw-bold">Juegos Destacados en Etherion</h2>
+          <p className="text-secondary">Títulos imprescindibles que combinan narrativa memorable, dirección artística y jugabilidad envolvente.</p>
         </div>
 
         <div className="row g-4 mt-3">
@@ -41,7 +41,7 @@ function JuegosDestacados() {
           </div>
           <div className="col-md-6 col-lg-3">
             <JuegoCard
-              nombre="Fantasia"
+              nombre="Fantasía"
               genero="RPG"
               descripcion="Mundos imaginarios llenos de magia, criaturas extraordinarias, poderes sobrenaturales y universos únicos."
               imagen={imgPixel}

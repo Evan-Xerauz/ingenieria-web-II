@@ -1,21 +1,28 @@
+import { Link } from "react-router";
+
 function Navbar() {
   return (
-    <header className="etherion-navbar sticky-top">
-      <div className="container d-flex align-items-center justify-content-between py-3">
-        <a className="etherion-brand" href="#inicio">
-          <span className="etherion-brand__mark">E</span>
-          <span>ETHE<b>RION</b></span>
-        </a>
-
-        <nav className="etherion-nav d-flex align-items-center gap-4" aria-label="Navegación principal">
-          <a href="#inicio">Inicio</a>
-          <a href="#categorias">Categorías</a>
-          <a href="#destacados">Juegos Destacados</a>
-          <a href="#novedades">Novedades</a>
-          <a className="btn btn-etherion btn-sm px-3" href="#destacados">Explorar Catálogo</a>
-        </nav>
+    <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#0b0f19' }}>
+      <div className="container">
+        <Link className="navbar-brand text-success fw-bold" to="/">ETHERION</Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Inicio</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/catalogo">Catálogo</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-warning" to="/favoritos">Mis Favoritos</Link>
+            </li>
+          </ul>
+        </div>
       </div>
-    </header>
+    </nav>
   );
 }
 
